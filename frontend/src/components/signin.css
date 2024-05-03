@@ -1,0 +1,131 @@
+.auth-container{
+    display:flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+    width: 80rem;
+    height: 50rem;
+    position: relative;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgb(239, 247, 242);
+    backdrop-filter: 5px;
+}
+
+
+.view-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:50%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(113, 160, 132, 0.5); 
+    border-radius: 10px;
+}
+
+.signin-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:45rem;
+    width:35rem;
+    position: relative;
+}
+
+.signin-container h1{
+    position: absolute;
+    top:3rem;
+    left:5rem;
+    color: rgb(80, 78, 78);
+}
+
+.signin-form{
+    margin-top: 2.5rem;
+    height: 50%;
+    width: 80%;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control{
+    margin-top: 4rem;
+    position: relative;
+    width:100%;
+    height:50px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+    margin:30px 0;
+}
+
+.form-control label{
+    position:absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.76);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s; 
+}
+
+.form-control input{
+    width:85%;
+    height:100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size: 1.5rem;
+    color:rgba(5, 5, 5, 0.76);
+    font-weight: 600;
+    padding:0 35px 0 5px;
+}
+
+
+.form-control input:focus ~ label,
+.form-control input:valid ~ label,
+.form-control input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    font-size: 13.5px;
+}
+
+
+.form-control .icon{
+    position: absolute;
+    right:8px;
+    font-size: 1.2em;
+    line-height: 65px;
+}
+
+.signin-form button {
+    margin-top: 3rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 20px;
+    border: none;
+    color: rgb(196, 196, 196);
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-image: url("../../public/images/pexels-pixabay-531880.jpg");
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.signin-form button:hover {
+    background-color: rgb(2, 68, 46);
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+
+
+
