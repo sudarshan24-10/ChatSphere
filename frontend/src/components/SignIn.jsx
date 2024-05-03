@@ -5,9 +5,6 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 
 
 const SignIn = () => {
-
-
-
   return (
     <div className="auth-container">
         <div className='input-container'>
