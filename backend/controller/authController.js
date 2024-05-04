@@ -22,8 +22,9 @@ export const signin = async (req, res, next) => {
     if (!user){
         throw new CreateError(404, "User not found");
     }
-
-    const isCorrect = bcrypt.compare(req.body.password, user.password);
+    console.log(user);
+    console.log(req.body);
+    const isCorrect = await bcrypt.compare(req.body.password, user.password);
 
     if (!isCorrect){
         throw new CreateError(401, "Incorrect Password");
