@@ -20,4 +20,13 @@ export const verifyToken = (req, res, next) => {
   }
 };
 
+export const fetchChats=async(req,res,next)=>{
+    try{
+      const result= Chat.find({user:{ $elemMatch:{$eq:req.user.id}}})
+      res.send(result)
+    }catch(err){
+      next(err);
+    }
+}
+
 

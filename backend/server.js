@@ -6,6 +6,8 @@ import cookieParser from "cookie-parser";
 import mongoose from 'mongoose';
 import CreateError from './utils/error.js';
 import AuthRouter from './routes/authRoute.js';
+import UserRouter from './routes/userRoute.js';
+import ChatRouter from './routes/chatRoute.js';
 
 dotenv.config();
 
@@ -29,6 +31,8 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 
 app.use("/api/auth",AuthRouter);
+app.use("/api/user",UserRouter);
+app.use("/api/chat",ChatRouter);
 
 
 app.use((err, req, res, next) => {
